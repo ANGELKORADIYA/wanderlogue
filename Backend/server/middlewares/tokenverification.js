@@ -2,7 +2,9 @@ const { valid ,email} = require("../controllers/login");
 
 async function tokenverification(req, res, next) {
   try {
-    const v = await email(req.headers.token);
+    if(!!req.headers.token){
+      const v = await email(req.headers.token);
+
     if (v === false) {
       res.status(401).json("wrong token");
     } else {
@@ -10,7 +12,11 @@ async function tokenverification(req, res, next) {
       req.email=v
       next()
     }
-    
+  }
+    else{
+      res.status(401).json("no token");
+
+    }
   } catch (error) {
     console.log("tokenverification" , error);
   }

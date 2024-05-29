@@ -5,11 +5,11 @@ const jwt = require("jsonwebtoken");
 
 const { loginModel, dealerModel, stockModel } = require("../models/schema");
 
-require('dotenv').config({ path: 'config.env' });
+// require('dotenv').config({ path: 'config.env' });
 const DBurl =  process.env.DB_URL ||"mongodb+srv://koradiyaangel11:1234@quiz.73dex1f.mongodb.net/?retryWrites=true&w=majority";
 const dbName= "wanderlogue";
-const secretKey = process.env.SECRET_KEY || 1290 ;
-const PASSWORD_KEY = Number(process.env.PASSWORD_KEY||"ak25");
+const secretKey =  "ak25" ;
+const PASSWORD_KEY = Number(process.env.PASSWORD_KEY||1290);
 
 /*
 signup takes :-
