@@ -1,7 +1,7 @@
 const { mongoose } = require("mongoose");
 
 const { postModel } = require("../models/schema");
-
+require('dotenv').config({ path: 'config.env' });
 const DBurl =  process.env.DB_URL
 const dbName = "wanderlogue";
 const secretKey = process.env.SECRET_KEY;

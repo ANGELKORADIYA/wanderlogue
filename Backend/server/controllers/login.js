@@ -5,6 +5,7 @@ const jwt = require("jsonwebtoken");
 
 const { loginModel, dealerModel, stockModel } = require("../models/schema");
 
+require('dotenv').config({ path: 'config.env' });
 const DBurl =  process.env.DB_URL;
 const dbName= "wanderlogue";
 const secretKey = process.env.SECRET_KEY ;
