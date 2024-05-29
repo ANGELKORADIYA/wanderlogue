@@ -5,10 +5,10 @@ const jwt = require("jsonwebtoken");
 
 const { loginModel, dealerModel, stockModel } = require("../models/schema");
 
-const DBurl =  process.env.DB_URL ||  "mongodb+srv://koradiyaangel11:1234@quiz.73dex1f.mongodb.net/?retryWrites=true&w=majority";
-const dbName= "wanderlogue"
-const secretKey = process.env.SECRET_KEY || "ak25";
-const PASSWORD_KEY = Number(process.env.PASSWORD_KEY) || 1290;
+const DBurl =  process.env.DB_URL;
+const dbName= "wanderlogue";
+const secretKey = process.env.SECRET_KEY ;
+const PASSWORD_KEY = Number(process.env.PASSWORD_KEY);
 
 /*
 signup takes :-
