@@ -1,0 +1,48 @@
+.photo-gallery {
+    position: relative;
+  }
+  
+  .photo-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .photo-container img {
+    max-height: 400px;
+    width: auto;
+    display: block;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .overlay button {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #333;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+  }
+  
+  .overlay button:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .photo-indicator {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  

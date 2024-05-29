@@ -1,0 +1,26 @@
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer; /* Change cursor to pointer */
+  transition: transform 0.3s ease;
+  height: 200px; /* Set a fixed height */
+  overflow: hidden; /* Hide overflow content */
+  display: flex;
+
+}
+.card-content {
+  
+  display: flex; /* Use flexbox */
+  flex-direction: column;
+  justify-content: space-evenly; /* Center horizontally */
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-link {
+  text-decoration: none; /* Remove default underline */
+  color: inherit; /* Inherit color from parent */
+}

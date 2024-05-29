@@ -1,0 +1,32 @@
+.random-posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    transition: margin-left 0.5s ease; /* Add transition */
+
+  }
+  .loadmore{
+      padding: 12px;
+      margin: 10px;
+      margin-right: 20px;
+      background: whitesmoke;
+      color: black;
+      border: 1px solid black;
+      font-weight: 700;
+      font-size: large;
+      border-radius: 7px;
+      width: 120px;
+  }
+  button[class="loadmore"]{
+    cursor: pointer;
+    background: #000;
+    color: white;
+
+  }
+ button[class="loadmore"]:hover{
+    transform:scale(1.04)
+  }
+ button[class="loadmore"]:active{
+    transform:scale(0.6)
+  }
