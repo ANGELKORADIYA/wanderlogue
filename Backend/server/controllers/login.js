@@ -1,4 +1,4 @@
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const {mongoose, } = require("mongoose");
 const {MongoClient,ObjectId} = require("mongodb")
 const jwt = require("jsonwebtoken");
@@ -9,7 +9,7 @@ const { loginModel, dealerModel, stockModel } = require("../models/schema");
 const DBurl =  process.env.DB_URL ||"mongodb+srv://koradiyaangel11:1234@quiz.73dex1f.mongodb.net/?retryWrites=true&w=majority";
 const dbName= "wanderlogue";
 const secretKey =  "ak25" ;
-const PASSWORD_KEY = Number(process.env.PASSWORD_KEY||1290);
+const PASSWORD_KEY = Number(12);
 
 /*
 signup takes :-
@@ -51,7 +51,9 @@ module.exports.login = async (login_data, res) => {
     });
     let check = await loginModel.findOne({ email: login_data.email });
     if (check && login_data.password!=''&&login_data.email!='') {
-      if (await bcrypt.compare(login_data.password, check.password)) {
+      let ress=await bcrypt.compare(login_data.password, check.password)
+      console.log(ress)  
+      if (ress) {
         // if (login_data.page == check.page) {
           let token = jwt.sign({ email: check._id }, secretKey);
           res.cookie("token", token, { maxAge: 1000000, httpOnly: true });
