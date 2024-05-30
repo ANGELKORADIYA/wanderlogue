@@ -1,6 +1,6 @@
 import React from "react";
 import Cookies from "js-cookie";
-const URL = "http://localhost:8383/"
+const URL = "https://wanderlogue.onrender.com/"
 export const post = async (url, payload) => {
   try {
     let cookies = document.cookie;
